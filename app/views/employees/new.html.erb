@@ -3,151 +3,163 @@
 <div class="panel panel-primary">
 	<div class="panel-heading">
 		<h3 class="panel-header-pad inline-block" >Employee Form</h3>
-		<button class="btn btn-default btn-sm inline-block pull-right" data-toggle="modal" data-target="#myModal">Apply Leave</button>
+		<button class="btn btn-default btn-sm inline-block pull-right" data-toggle="modal" data-target="#applyPopUp">Apply Leave</button>
 	</div>
 	<div class="panel-body">
-		<form action=" " method="post"  id="employee_form">
+		<form action=" " method="post" id="employee_form">
 
 		<div class="row">
 			<div class="col-sm-12">
+
 				<fieldset>
-					<legend>Personal Details:</legend>
+					<legend><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Personal Details:</legend>
 
+					<div class="col-sm-12">
+						<div class="col-sm-2">
+							<div id="image-preview" class='border-radius'>
+								<div class="align-bottom">
+									<label for="image-upload" id="image-label" class="btn-bs-file btn btn-xs btn-info">Choose File</label>
+									<input type="file" name="image" id="image-upload" required="required"/>
+								</div>
+							</div>
+							<div class="br-space"></div>
+						</div>
+					</div>
+
+					<div class="col-sm-12">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">First Name:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input  name="first_name" placeholder="First Name" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="" >Last Name:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input name="last_name" placeholder="Last Name" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">E-Mail:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+									<input name="email" placeholder="E-Mail" class="form-control" type="email" required="required">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Phone:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+									<input name="phone" placeholder="1234567890" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">DOB:</label>
+								<div class='input-group date datePicker'>
+									<input type='text' class="form-control" required="required">
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Gender:</label>
+								<div class="col-md-8 pull-right">
+									<div class="form-check form-check-inline col-md-4">
+										<label class="form-check-label">
+											<input class="form-check-input" type="radio" name="gender" value="M" required="required"> Male
+										</label>
+									</div>
+									<div class="form-check form-check-inline col-md-4">
+										<label class="form-check-label">
+											<input class="form-check-input" type="radio" name="gender" value="F"> Female
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12">
+						<hr class="hr-style" />
+					</div>
+
+					<div class="col-sm-12">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Employee ID:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+									<input name="project_manager" placeholder="Employee ID" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Joining Date:</label>
+								<div class='input-group date datePicker'>
+									<input type='text' class="form-control" required="required">
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Skill Technology:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+									<input name="project_name" placeholder="Skill Technology" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-12">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label class="">Designation:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
+									<input name="project_name" placeholder="Designation" class="form-control" type="text" required="required">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xs-12">
+						<hr class="hr-style" />
+					</div>
+
+					<div class="col-sm-12">
 						<div class="col-sm-12">
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">First Name:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input  name="first_name" placeholder="First Name" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="" >Last Name:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input name="last_name" placeholder="Last Name" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">E-Mail:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-										<input name="email" placeholder="E-Mail" class="form-control" type="email" required="required">
-									</div>
+							<div class="form-group">
+								<label class="">Note and Interview Comments:</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+									<textarea class="form-control" name="comment" placeholder="Note and Interview Comments" required="required"></textarea>
 								</div>
 							</div>
 						</div>
-
-
-						<div class="col-sm-12">
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Phone:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-										<input name="phone" placeholder="1234567890" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">DOB:</label>
-									<div class='input-group date datePicker'>
-										<input type='text' class="form-control" required="required">
-										<span class="input-group-addon">
-											<span class="glyphicon glyphicon-calendar"></span>
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Gender:</label>
-									<div class="col-md-8 pull-right">
-										<div class="form-check form-check-inline col-md-4">
-											<label class="form-check-label">
-												<input class="form-check-input" type="radio" name="gender" value="M" required="required"> Male
-											</label>
-										</div>
-										<div class="form-check form-check-inline col-md-4">
-											<label class="form-check-label">
-												<input class="form-check-input" type="radio" name="gender" value="F" required="required"> Female
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12">
-							<hr class="hr-style" />
-						</div>
-
-						<div class="col-sm-12">
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Employee ID:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-										<input name="project_manager" placeholder="Employee ID" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Joining Date:</label>
-									<div class='input-group date datePicker'>
-										<input type='text' class="form-control" required="required">
-										<span class="input-group-addon">
-											<span class="glyphicon glyphicon-calendar"></span>
-										</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Skill Technology:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-										<input name="project_name" placeholder="Skill Technology" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-12">
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="">Designation:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-										<input name="project_name" placeholder="Designation" class="form-control" type="text" required="required">
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xs-12">
-							<hr class="hr-style" />
-						</div>
-
-						<div class="col-sm-12">
-							<div class="col-sm-8">
-								<div class="form-group">
-									<label class="">Note and Interview Comments:</label>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-										<textarea class="form-control" name="comment" placeholder="Note and Interview Comments" required="required"></textarea>
-									</div>
-								</div>
-							</div>
-						</div>
-					</fieldset>
+					</div>
+				</fieldset>
 			</div>
 		</div>
 
@@ -156,7 +168,7 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<fieldset>
-						<legend>Address Details:</legend>
+						<legend><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Address Details:</legend>
 
 						<div class="col-sm-12 text-left">
 							<h4>Current Address:</h4>
@@ -278,10 +290,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<fieldset class="table-cell">
-						<legend>Project History:</legend>
+						<legend><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Project History:</legend>
 
 						<div class="table-responsive">
-							<table class="table table-bordered">
+							<table id="projects_history_table" class="table table-bordered">
 								<thead class="thead-inverse">
 									<tr>
 										<th>Project Title</th>
@@ -324,6 +336,47 @@
 				</div>
 			</div>
 			<div class="br-space"></div>
+			<div class="row">
+				<div class="col-sm-12">
+					<fieldset class="table-cell">
+						<legend><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Team Members:</legend>
+
+						<div class="table-responsive">
+							<table id="projects_history_table" class="table table-bordered">
+								<thead class="thead-inverse">
+									<tr>
+										<th>Employee ID</th>
+										<th>Name</th>
+										<th>Email</th>
+										<th>Phone</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1234</td>
+										<td>Steve Cho</td>
+										<td>mark@example.com</td>
+										<td>1324567890</td>
+									</tr>
+									<tr>
+										<td>1234</td>
+										<td>Steve Cho</td>
+										<td>mark@example.com</td>
+										<td>1324567890</td>
+									</tr>
+									<tr>
+										<td>1234</td>
+										<td>Steve Cho</td>
+										<td>mark@example.com</td>
+										<td>1324567890</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="br-space"></div>
 
 			<div class="row">
 				<div class="col-sm-12 text-center">
@@ -335,11 +388,8 @@
 	</div>
 </div>
 
-<script src="/assets/employee.js"></script>
-
-
-
-<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+<div id="applyPopUp" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	<form action="post" method="" id="leave_form">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -348,55 +398,159 @@
       </div>
       <div class="modal-body">
 
-
-				<form action="post" method="" id="leave_form">
-	        <div class="row">
-						<div class="col-sm-12">
-	        		<div class="form-group row">
-	        			<label class="col-sm-3 col-form-label">Leave From:</label>
-	        			<div class="col-sm-5">
-		        			<div class='input-group date datePicker'>
-		        				<input type='text' class="form-control" required="required">
-		        				<span class="input-group-addon">
-		        					<span class="glyphicon glyphicon-calendar"></span>
-		        				</span>
-		        			</div>
-		        		</div>
+        <div class="row">
+					<div class="col-sm-12">
+        		<div class="form-group row">
+        			<label class="col-sm-3 col-form-label">Leave From:</label>
+        			<div class="col-sm-5">
+	        			<div class='input-group date datePicker'>
+	        				<input type='text' class="form-control" required="required">
+	        				<span class="input-group-addon">
+	        					<span class="glyphicon glyphicon-calendar"></span>
+	        				</span>
+	        			</div>
 	        		</div>
-	        	</div>
-						<div class="col-sm-12">
-	        		<div class="form-group row">
-	        			<label class="col-sm-3 col-form-label">Leave Upto:</label>
-	        			<div class="col-sm-5">
-		        			<div class='input-group date datePicker'>
-		        				<input type='text' class="form-control" required="required">
-		        				<span class="input-group-addon">
-		        					<span class="glyphicon glyphicon-calendar"></span>
-		        				</span>
-		        			</div>
-		        		</div>
+        		</div>
+        	</div>
+					<div class="col-sm-12">
+        		<div class="form-group row">
+        			<label class="col-sm-3 col-form-label">Leave Upto:</label>
+        			<div class="col-sm-5">
+	        			<div class='input-group date datePicker'>
+	        				<input type='text' class="form-control" required="required">
+	        				<span class="input-group-addon">
+	        					<span class="glyphicon glyphicon-calendar"></span>
+	        				</span>
+	        			</div>
 	        		</div>
-		        </div>
-		      </div>
-
-					<div class="row">
-	      		<div class="col-sm-12">
-	      			<div class="form-group">
-	      				<label class="">Mention valid reason for leave: </label>
-	      				<div class="input-group">
-	      					<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-	      					<textarea class="form-control" name="comment" placeholder="Mention valid reason for leave..."></textarea>
-	      				</div>
-	      			</div>
-	      		</div>
+        		</div>
 	        </div>
 	      </div>
-	    </form>
 
+				<div class="row">
+      		<div class="col-sm-12">
+      			<div class="form-group">
+      				<label class="">Mention valid reason for leave: </label>
+      				<div class="input-group">
+      					<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+      					<textarea class="form-control" name="comment" placeholder="Mention valid reason for leave..." required="required"></textarea>
+      				</div>
+      			</div>
+      		</div>
+        </div>
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label class="">Status:</label>
+							<div class="col-md-12 pull-right">
+								<div class="form-check form-check-inline col-md-3">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="status" value="T" required="required"> Approved
+									</label>
+								</div>
+								<div class="form-check form-check-inline col-md-3">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="status" value="F"> Rejected
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Apply</button>
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Apply</button>
       </div>
     </div>
   </div>
+	</form>
 </div>
+
+<div id="changeLeadPopUp" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+	<form action="post" method="" id="leave_form">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Leave Details</h4>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+					<div class="col-sm-12">
+        		<div class="form-group row">
+        			<label class="col-sm-3 col-form-label">Leave From:</label>
+        			<div class="col-sm-5">
+	        			<div class='input-group date datePicker'>
+	        				<input type='text' class="form-control" required="required">
+	        				<span class="input-group-addon">
+	        					<span class="glyphicon glyphicon-calendar"></span>
+	        				</span>
+	        			</div>
+	        		</div>
+        		</div>
+        	</div>
+					<div class="col-sm-12">
+        		<div class="form-group row">
+        			<label class="col-sm-3 col-form-label">Leave Upto:</label>
+        			<div class="col-sm-5">
+	        			<div class='input-group date datePicker'>
+	        				<input type='text' class="form-control" required="required">
+	        				<span class="input-group-addon">
+	        					<span class="glyphicon glyphicon-calendar"></span>
+	        				</span>
+	        			</div>
+	        		</div>
+        		</div>
+	        </div>
+	      </div>
+
+				<div class="row">
+      		<div class="col-sm-12">
+      			<div class="form-group">
+      				<label class="">Mention valid reason for leave: </label>
+      				<div class="input-group">
+      					<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+      					<textarea class="form-control" name="comment" placeholder="Mention valid reason for leave..." required="required"></textarea>
+      				</div>
+      			</div>
+      		</div>
+        </div>
+
+
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label class="">Status:</label>
+							<div class="col-md-12 pull-right">
+								<div class="form-check form-check-inline col-md-3">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="status" value="T" required="required"> Approved
+									</label>
+								</div>
+								<div class="form-check form-check-inline col-md-3">
+									<label class="form-check-label">
+										<input class="form-check-input" type="radio" name="status" value="F"> Rejected
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Apply</button>
+      </div>
+    </div>
+  </div>
+	</form>
+</div>
+
+
+<script src="/assets/employee.js"></script>

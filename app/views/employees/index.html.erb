@@ -5,15 +5,14 @@
 	<div class="panel-body">
 
 		<div class="table-responsive">
-			<table class="table table-bordered">
+			<table id="employee_table" class="table table-bordered">
 				<thead class="thead-inverse">
 					<tr>
 						<th width="10%">Employee ID</th>
 						<th>Name and Email</th>
 						<th>Phone</th>
 						<th>Manager Name</th>
-						<th>DOB</th>
-						<th width="13%">Actions</th>
+						<th width="10%" class="text-center">Actions</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -22,27 +21,64 @@
 						<td>Mark Zukarburg<br />mark@example.com</td>
 						<td>1234567890</td>
 						<td>Tim john</td>
-						<td>12-1-1983</td>
-						<td><button class="btn btn-warning">Edit</button>
-						<button class="btn btn-danger">Delete</button></td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger" data-toggle="modal" data-target="#changeLeadPopUp">Change Lead</button></td>
 					</tr>
 					<tr>
 						<td>1234</td>
 						<td>Mark Zukarburg<br />matt@example.com</td>
 						<td>1234567890</td>
 						<td>Matt Dewey</td>
-						<td>12-1-1983</td>
-						<td><button class="btn btn-warning">Edit</button>
-						<button class="btn btn-danger">Delete</button></td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></button></td>
 					</tr>
 					<tr>
 						<td>1234</td>
 						<td>Mark Zukarburg<br />steve@example.com</td>
 						<td>1234567890</td>
 						<td>Steve Cho</td>
-						<td>12-1-1983</td>
-						<td><button class="btn btn-warning">Edit</button>
-						<button class="btn btn-danger">Delete</button></td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+					</tr>
+					<tr>
+						<td>1234</td>
+						<td>Mark Zukarburg<br />mark@example.com</td>
+						<td>1234567890</td>
+						<td>Tim john</td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></button></td>
+					</tr>
+					<tr>
+						<td>1234</td>
+						<td>Mark Zukarburg<br />matt@example.com</td>
+						<td>1234567890</td>
+						<td>Matt Dewey</td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></button></td>
+					</tr>
+					<tr>
+						<td>1234</td>
+						<td>Mark Zukarburg<br />steve@example.com</td>
+						<td>1234567890</td>
+						<td>Steve Cho</td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+					</tr>
+					<tr>
+						<td>1234</td>
+						<td>Mark Zukarburg<br />mark@example.com</td>
+						<td>1234567890</td>
+						<td>Tim john</td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></button></td>
+					</tr>
+					<tr>
+						<td>1234</td>
+						<td>Mark Zukarburg<br />matt@example.com</td>
+						<td>1234567890</td>
+						<td>Matt Dewey</td>
+						<td class="text-center"><a href="/employees/new" class="btn btn-warning"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+						<button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button></button></td>
 					</tr>
 				</tbody>
 			</table>
@@ -50,3 +86,5 @@
 
 	</div>
 </div>
+
+<script src="/assets/employee.js"></script>

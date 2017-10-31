@@ -1,3 +1,26 @@
+.panel {
+  border-radius: 2px;
+}
+
+.panel-heading {
+  display: block !important;
+  border-radius: 2px;
+}
+.inline-block{
+  display: inline-block !important;
+}
+
+.table-cell {
+  display: table-cell !important; width: 100% !important;
+}
+
+.border-radius {
+  border-radius: 4px;
+}
+
+#employee_table {
+  width: 99%;
+}
 
 #employee_form fieldset {
   border: 1px solid #ddd !important;
@@ -20,18 +43,37 @@
   background-color: lightgray;
 }
 
-.panel {
-  border-radius: 2px;
-}
 
-.panel-heading {
-  display: block !important;
-  border-radius: 2px;
-}
-.inline-block{
-  display: inline-block !important;
-}
-
-.table-cell {
-  display: table-cell !important; width: 100% !important;
+#image-preview {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #ecf0f1;
+  input {
+    line-height: 200px;
+    font-size: 200px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+  }
+  label {
+    position: absolute;
+    z-index: 5;
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: #bdc3c7;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+  }
 }
