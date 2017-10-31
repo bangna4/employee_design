@@ -12,19 +12,17 @@
 			<div class="col-sm-12">
 
 				<fieldset>
-					<legend><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;Personal Details:</legend>
-
-					<div class="col-sm-12">
-						<div class="col-sm-2">
-							<div id="image-preview" class='border-radius'>
-								<div class="align-bottom">
-									<label for="image-upload" id="image-label" class="btn-bs-file btn btn-xs btn-info">Choose File</label>
-									<input type="file" name="image" id="image-upload" required="required"/>
-								</div>
+					<legend>
+						<div id="image-preview" class='inline-block'>
+							<div class="align-bottom">
+								<!-- <label for="image-upload" id="image-label" class="btn-bs-file btn btn-xs btn-info">Choose File</label> -->
+								<!-- <input type="file" name="image" id="image-upload" class="form-control" required="required"/> -->
+								<input name="image" id="image-upload" class="form-control" data-toggle="modal" />
+								<!-- data-target="#editProfilePopUp" -->
 							</div>
-							<div class="br-space"></div>
 						</div>
-					</div>
+						<div class="pull-right">Personal Details:</div>
+					</legend>
 
 					<div class="col-sm-12">
 						<div class="col-sm-4">
@@ -83,7 +81,7 @@
 								<div class="col-md-8 pull-right">
 									<div class="form-check form-check-inline col-md-4">
 										<label class="form-check-label">
-											<input class="form-check-input" type="radio" name="gender" value="M" required="required"> Male
+											<input class="form-check-input" type="radio" name="gender" value="M" checked> Male
 										</label>
 									</div>
 									<div class="form-check form-check-inline col-md-4">
@@ -168,7 +166,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<fieldset>
-						<legend><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Address Details:</legend>
+						<legend>
+							<div id="image-preview2" class='inline-block'></div>
+							<div class="pull-right">Address Details:</div>
+						</legend>
 
 						<div class="col-sm-12 text-left">
 							<h4>Current Address:</h4>
@@ -198,8 +199,8 @@
 									<label class="">State:</label>
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-										<select name="state" class="form-control selectpicker" >
-											<option value=" " >Please select your state</option>
+										<select name="current_state" class="form-control selectpicker" >
+											<option value="">Please select your state</option>
 											<option>Alabama</option>
 											<option>Alaska</option>
 											<option >Arizona</option>
@@ -256,8 +257,8 @@
 									<label class="">State:</label>
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-										<select name="state" class="form-control selectpicker" >
-											<option value=" " >Please select your state</option>
+										<select name="permanent_state" class="form-control selectpicker" >
+											<option value="">Please select your state</option>
 											<option>Alabama</option>
 											<option>Alaska</option>
 											<option >Arizona</option>
@@ -290,7 +291,10 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<fieldset class="table-cell">
-						<legend><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Project History:</legend>
+						<legend>
+							<div id="image-preview3" class='inline-block'></div>
+							<div class="pull-right">Project History:</div>
+						</legend>
 
 						<div class="table-responsive">
 							<table id="projects_history_table" class="table table-bordered">
@@ -311,7 +315,12 @@
 										<td>Steve Cho</td>
 										<td>01-02-2016</td>
 										<td>01-02-2017</td>
-										<td>4.2</td>
+										<td>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span></td>
 									</tr>
 									<tr>
 										<td>Freepour</td>
@@ -319,7 +328,12 @@
 										<td>Matt Cho</td>
 										<td>01-02-2016</td>
 										<td>01-02-2017</td>
-										<td>3.5</td>
+										<td>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span></td>
 									</tr>
 									<tr>
 										<td>Thrive</td>
@@ -327,7 +341,13 @@
 										<td>Robert Patinnson</td>
 										<td>01-02-2016</td>
 										<td>01-02-2017</td>
-										<td>4.7</td>
+										<td>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -339,10 +359,13 @@
 			<div class="row">
 				<div class="col-sm-12">
 					<fieldset class="table-cell">
-						<legend><i class="fa fa-history" aria-hidden="true"></i>&nbsp;&nbsp;Team Members:</legend>
+						<legend>
+							<div id="image-preview4" class='inline-block'></div>
+							<div class="pull-right">Team Members:</div>
+						</legend>
 
 						<div class="table-responsive">
-							<table id="projects_history_table" class="table table-bordered">
+							<table id="team_members_table" class="table table-bordered">
 								<thead class="thead-inverse">
 									<tr>
 										<th>Employee ID</th>
@@ -397,7 +420,6 @@
         <h4 class="modal-title" id="gridSystemModalLabel">Leave Details</h4>
       </div>
       <div class="modal-body">
-
         <div class="row">
 					<div class="col-sm-12">
         		<div class="form-group row">
@@ -426,7 +448,6 @@
         		</div>
 	        </div>
 	      </div>
-
 				<div class="row">
       		<div class="col-sm-12">
       			<div class="form-group">
@@ -438,8 +459,6 @@
       			</div>
       		</div>
         </div>
-
-
 				<div class="row">
 					<div class="col-sm-12">
 						<div class="form-group">
@@ -447,7 +466,7 @@
 							<div class="col-md-12 pull-right">
 								<div class="form-check form-check-inline col-md-3">
 									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="status" value="T" required="required"> Approved
+										<input class="form-check-input" type="radio" name="status" value="T" checked> Approved
 									</label>
 								</div>
 								<div class="form-check form-check-inline col-md-3">
@@ -470,75 +489,19 @@
 	</form>
 </div>
 
-<div id="changeLeadPopUp" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+<div id="editProfilePopUp" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
 	<form action="post" method="" id="leave_form">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Leave Details</h4>
+        <h4 class="modal-title" id="gridSystemModalLabel">Edit Profile</h4>
       </div>
       <div class="modal-body">
 
-        <div class="row">
-					<div class="col-sm-12">
-        		<div class="form-group row">
-        			<label class="col-sm-3 col-form-label">Leave From:</label>
-        			<div class="col-sm-5">
-	        			<div class='input-group date datePicker'>
-	        				<input type='text' class="form-control" required="required">
-	        				<span class="input-group-addon">
-	        					<span class="glyphicon glyphicon-calendar"></span>
-	        				</span>
-	        			</div>
-	        		</div>
-        		</div>
-        	</div>
-					<div class="col-sm-12">
-        		<div class="form-group row">
-        			<label class="col-sm-3 col-form-label">Leave Upto:</label>
-        			<div class="col-sm-5">
-	        			<div class='input-group date datePicker'>
-	        				<input type='text' class="form-control" required="required">
-	        				<span class="input-group-addon">
-	        					<span class="glyphicon glyphicon-calendar"></span>
-	        				</span>
-	        			</div>
-	        		</div>
-        		</div>
-	        </div>
-	      </div>
-
 				<div class="row">
-      		<div class="col-sm-12">
-      			<div class="form-group">
-      				<label class="">Mention valid reason for leave: </label>
-      				<div class="input-group">
-      					<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-      					<textarea class="form-control" name="comment" placeholder="Mention valid reason for leave..." required="required"></textarea>
-      				</div>
-      			</div>
-      		</div>
-        </div>
-
-
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="form-group">
-							<label class="">Status:</label>
-							<div class="col-md-12 pull-right">
-								<div class="form-check form-check-inline col-md-3">
-									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="status" value="T" required="required"> Approved
-									</label>
-								</div>
-								<div class="form-check form-check-inline col-md-3">
-									<label class="form-check-label">
-										<input class="form-check-input" type="radio" name="status" value="F"> Rejected
-									</label>
-								</div>
-							</div>
-						</div>
+					<div class="col-sm-12 text-center">
+							<img src="" id="imagepreview" style="width: 400px; height: 264px;">
 					</div>
 				</div>
 
@@ -551,6 +514,5 @@
   </div>
 	</form>
 </div>
-
 
 <script src="/assets/employee.js"></script>
